@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "newArchEnabled": true,
+    "name": "Bon-hotel",
+    "slug": "Bon-hotel",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "../client/assets/images/Logo.png",
+    "scheme": "bonhotel",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "../client/assets/images/Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "splash": {
+        "image": "../client/assets/images/Logo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library to allow you to upload a profile picture.",
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification",
+          "fetch",
+          "remote-notification",
+          "fetch",
+          "remote-notification",
+          "fetch",
+          "remote-notification"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location."
+      },
+      "bundleIdentifier": "com.anonymous.Bonhotel",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    },
+    "android": {
+      "splash": {
+        "image": "../client/assets/images/Logo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "../client/assets/images/Logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.Bonhotel",
+      "runtimeVersion": "1.0.0"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "../client/assets/images/Logo.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "115b8bc4-0a3a-48f6-be84-bdd6bce26316"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/115b8bc4-0a3a-48f6-be84-bdd6bce26316"
+    }
+  }
+}
