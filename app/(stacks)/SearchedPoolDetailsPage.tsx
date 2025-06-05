@@ -94,7 +94,7 @@ export default function SearchedPoolDetailsPage () {
       setLoading(true)
       try {
         const response = await axios.get(
-          `http:/10.0.1.27:5001/hotel/${pool}/${id}`
+          `https://bonserver-vic7.onrender.com/hotel/${pool}/${id}`
         )
         const extractImageUrls = (htmlString: string): string[] => {
           return [...(htmlString.match(/src="(https:\/\/[^"]+)"/g) || [])].map(

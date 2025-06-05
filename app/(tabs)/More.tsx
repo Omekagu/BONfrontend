@@ -83,7 +83,7 @@ export default function More () {
       if (!userData) return null
       const parsedData = JSON.parse(userData)
       let token = parsedData.token.replace(/^"|"$/g, '')
-      await axios.get('http:/10.0.1.27:5001/auth/usertoken', {
+      await axios.get('https://bonserver-vic7.onrender.com/auth/usertoken', {
         headers: { Authorization: `Bearer ${token}` }
       })
       return parsedData.userId
@@ -102,7 +102,7 @@ export default function More () {
         return
       }
       const response = await axios.post(
-        'http:/10.0.1.27:5001/auth/update-profile-image',
+        'https://bonserver-vic7.onrender.com/auth/update-profile-image',
         { userId, profileImage: imageUrl }
       )
       Alert.alert('Success', 'Profile image updated successfully')
@@ -120,7 +120,7 @@ export default function More () {
       try {
         const userId = await getUserId()
         const response = await axios.get(
-          `http:/10.0.1.27:5001/user/user/${userId}`
+          `https://bonserver-vic7.onrender.com/user/user/${userId}`
         )
         setUser(response.data.user)
       } catch (error) {

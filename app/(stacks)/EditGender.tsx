@@ -29,7 +29,7 @@ export default function EditGender () {
       console.log('User ID:', userId, gender)
 
       const response = await axios.post(
-        'http:/10.0.1.27:5001/auth/edit-gender',
+        'https://bonserver-vic7.onrender.com/auth/edit-gender',
         {
           userId,
           gender

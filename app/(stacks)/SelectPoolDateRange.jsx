@@ -75,9 +75,12 @@ export default function SelectPoolDateRange () {
       const parsedData = JSON.parse(userData)
       let token = parsedData.token
       token = token.replace(/^"|"$/g, '')
-      const response = await axios.get('http:/10.0.1.27:5001/auth/usertoken', {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+      const response = await axios.get(
+        'https://bonserver-vic7.onrender.com/auth/usertoken',
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
       return parsedData.userId
     } catch (error) {
       console.error(

@@ -76,7 +76,7 @@ const FilterSuggestion = () => {
     setLoading(true)
     try {
       const response = await fetch(
-        `http:/10.0.1.27:5001/hotel/search/pool/${encodeURIComponent(
+        `https://bonserver-vic7.onrender.com/hotel/search/pool/${encodeURIComponent(
           selectedPool
         )}`
       )

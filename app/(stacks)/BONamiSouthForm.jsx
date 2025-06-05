@@ -177,7 +177,7 @@ export default function BONamiSouthForm () {
       console.log('Payload:', payload)
 
       const response = await axios.post(
-        'http:/10.0.1.27:5001/hotel/bonami-card',
+        'https://bonserver-vic7.onrender.com/hotel/bonami-card',
         payload
       )
 

@@ -74,9 +74,12 @@ export default function SelectDateRange () {
       console.log('Retrieved Token:', token)
       token = token.replace(/^"|"$/g, '')
       console.log('Cleaned JWT Token:', token)
-      const response = await axios.get('http:/10.0.1.27:5001/auth/usertoken', {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+      const response = await axios.get(
+        'https://bonserver-vic7.onrender.com/auth/usertoken',
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
       // console.log('User Data:', response.data)
       return parsedData.userId
     } catch (error) {
@@ -125,7 +128,7 @@ export default function SelectDateRange () {
         })
       } else if (status === 'PayOn-Arrival') {
         // const response = await axios.post(
-        //   'http:/10.0.1.27:5001/hotel/bookingCompleted',
+        //   'https://bonserver-vic7.onrender.com/hotel/bookingCompleted',
         //   bookingData
         // )
         // console.log('Booking Response:', response.data)

@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     }
 
     axios
-      .post('http:/10.0.1.27:5001/auth/send-otp', {
+      .post('https://bonserver-vic7.onrender.com/auth/send-otp', {
         email: email.trim().toLowerCase()
       })
       .then(() => {
@@ -52,7 +52,10 @@ const ForgotPassword = () => {
     }
 
     axios
-      .post('http:/10.0.1.27:5001/auth/verify-otp', { email, otp })
+      .post('https://bonserver-vic7.onrender.com/auth/verify-otp', {
+        email,
+        otp
+      })
       .then(() => {
         setStep(3)
         Toast.show({
@@ -77,7 +80,7 @@ const ForgotPassword = () => {
     }
 
     axios
-      .post('http:/10.0.1.27:5001/auth/reset-password', {
+      .post('https://bonserver-vic7.onrender.com/auth/reset-password', {
         email,
         newPassword
       })

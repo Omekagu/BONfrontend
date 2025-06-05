@@ -15,7 +15,7 @@
 // import Icon from 'react-native-vector-icons/Ionicons'
 
 // // Connect to your Node.js server
-// const socket = io('http:/10.0.1.27:5001')
+// const socket = io('https://bonserver-vic7.onrender.com')
 
 // export default function BookRide () {
 //   const [userLocation, setUserLocation] = useState(null)

@@ -26,7 +26,7 @@ export default function BONami () {
       const userId = parsed.userId
 
       const res = await axios.get(
-        `http:/10.0.1.27:5001/hotel/bonami/check/${userId}`
+        `https://bonserver-vic7.onrender.com/hotel/bonami/check/${userId}`
       )
       setHasValidCard(res.data.hasValidCard)
     } catch (err) {

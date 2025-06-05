@@ -75,7 +75,9 @@ const Suggestions = () => {
     setLoading(true)
     try {
       const response = await axios.get(
-        `http:/10.0.1.27:5001/hotel/search/${encodeURIComponent(query)}`
+        `https://bonserver-vic7.onrender.com/hotel/search/${encodeURIComponent(
+          query
+        )}`
       )
       setHotels(response.data.length ? response.data : [])
 

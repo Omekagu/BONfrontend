@@ -32,9 +32,12 @@ export default function Home () {
       console.log('Cleaned JWT Token:', token)
 
       // Fetch user data from backend
-      const response = await axios.get('http:/10.0.1.27:5001/auth/usertoken', {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+      const response = await axios.get(
+        'https://bonserver-vic7.onrender.com/auth/usertoken',
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
 
       console.log('User Data:', response.data)
       return parsedData.userId // Return userId after fetching data

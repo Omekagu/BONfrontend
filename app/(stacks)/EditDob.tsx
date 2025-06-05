@@ -30,10 +30,13 @@ export default function EditDob () {
       const tokenData = await AsyncStorage.getItem('token')
       const { userId } = JSON.parse(tokenData)
 
-      const response = await axios.post('http:/10.0.1.27:5001/auth/editDob', {
-        userId,
-        dob
-      })
+      const response = await axios.post(
+        'https://bonserver-vic7.onrender.com/auth/editDob',
+        {
+          userId,
+          dob
+        }
+      )
 
       if (response.status === 200) {
         Toast.show({
