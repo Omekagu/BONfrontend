@@ -5,11 +5,11 @@
     "slug": "Bon-hotel",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "/../assets/images/Logo.png",
+    "icon": "https://i.postimg.cc/L5SGjp88/BON-Hotel-logo.png",
     "scheme": "bonhotel",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "/../assets/images/Logo.png",
+      "image": "https://i.postimg.cc/L5SGjp88/BON-Hotel-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -37,7 +37,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "/../assets/images/Logo.png",
+        "foregroundImage": "https://i.postimg.cc/L5SGjp88/BON-Hotel-logo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.Bonhotel",
@@ -46,7 +46,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "/../assets/images/Logo.png"
+      "favicon": "https://i.postimg.cc/L5SGjp88/BON-Hotel-logo.png"
     },
     "plugins": [
       "expo-router",
