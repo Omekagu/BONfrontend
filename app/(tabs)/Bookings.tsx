@@ -30,7 +30,7 @@ const Bookings = () => {
       if (!userData) return null
       const parsedData = JSON.parse(userData)
       let token = parsedData.token.replace(/^"|"$/g, '')
-      await axios.get('http://10.0.1.27:5001/auth/usertoken', {
+      await axios.get('https://bonserver-vic7.onrender.com/auth/usertoken', {
         headers: { Authorization: `Bearer ${token}` }
       })
       return parsedData.userId
@@ -49,7 +49,7 @@ const Bookings = () => {
         console.log(user)
         if (!userId) return
         const response = await axios.get(
-          `http://10.0.1.27:5001/hotel/history/booking/${userId}`
+          `https://bonserver-vic7.onrender.com/hotel/history/booking/${userId}`
         )
         const sortedBookings = Array.isArray(response.data.data)
           ? response.data.data.sort(

@@ -119,7 +119,7 @@ export default function SelectPoolDateRange () {
 
       // Send booking to backend
       const res = await axios.post(
-        'http://10.0.1.27:5001/hotel/bookingCompleted',
+        'https://bonserver-vic7.onrender.com/hotel/bookingCompleted',
         bookingData
       )
 

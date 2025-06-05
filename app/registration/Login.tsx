@@ -53,10 +53,13 @@ const Login = () => {
     }
     console.log('Submitting login form with:', { email, password })
     try {
-      const res = await axios.post('http://10.0.1.27:5001/auth/login', {
-        email: email.trim().toLowerCase(),
-        password
-      })
+      const res = await axios.post(
+        'https://bonserver-vic7.onrender.com/auth/login',
+        {
+          email: email.trim().toLowerCase(),
+          password
+        }
+      )
 
       if (res.data?.data) {
         const { token, userId } = res.data.data
@@ -85,7 +88,7 @@ const Login = () => {
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <Image
-        source={require('../../assets/images/home-header-bg-placeholder.jpg')} // Replace with the actual image path
+        source={require('../../assets/images/Logo.png')} // Replace with the actual image path
         style={styles.backgroundImage}
       />
       <View style={styles.overlay}>

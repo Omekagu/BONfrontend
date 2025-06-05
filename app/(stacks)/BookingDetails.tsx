@@ -99,7 +99,7 @@ export default function BookingDetails () {
       setLoading(true)
       try {
         const response = await axios.get<{ data: Booking[] }>(
-          `http://10.0.1.27:5001/hotel/history/booking/${userId}`
+          `https://bonserver-vic7.onrender.com/hotel/history/booking/${userId}`
         )
         const booking = Array.isArray(response.data.data)
           ? response.data.data.find(b => b._id === id)
