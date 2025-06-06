@@ -8,7 +8,7 @@ import {
   Image,
   Alert
 } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSession from 'expo-auth-session'
