@@ -88,7 +88,7 @@ const Login = () => {
   return (
     <KeyboardAwareScrollView contentContainerStyle={styles.container}>
       <Image
-        source={require('../../assets/images/Logo.png')} // Replace with the actual image path
+        source={require('../../assets/images/home-header-bg-placeholder.jpg')} // Replace with the actual image path
         style={styles.backgroundImage}
       />
       <View style={styles.overlay}>
@@ -99,7 +99,7 @@ const Login = () => {
             alignItems: 'center'
           }}
         >
-          <Text style={styles.loginTitle}>WELCOME TO BON</Text>
+          <Text style={styles.loginTitle}>WELCOME BACK TO BON</Text>
           <Button
             mode='contained'
             onPress={() => router.push('/registration/Registration')}
@@ -115,7 +115,7 @@ const Login = () => {
 
         <View style={styles.profileCard}>
           <Image
-            source={require('../../assets/images/home-header-bg-placeholder.jpg')} // Replace with user avatar if available
+            source={require('../../assets/images/Logo.png')} // Replace with user avatar if available
             style={styles.avatar}
           />
           <View style={styles.inputContainer}>
