@@ -15,9 +15,7 @@ const WelcomeScreen = () => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={{
-          uri: 'https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=600'
-        }}
+        source={require('../../assets/images/home-header-bg-placeholder.jpg')}
         style={styles.backgroundImage}
         resizeMode='cover'
       >

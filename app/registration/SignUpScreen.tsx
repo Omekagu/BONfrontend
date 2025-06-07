@@ -8,7 +8,7 @@ import {
   Image,
   Alert
 } from 'react-native'
-import Icon from '@expo/vector-icons'
+import Icon, { Ionicons } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSession from 'expo-auth-session'
@@ -61,18 +61,18 @@ const SignUpScreen = () => {
         {/* Sign Up Buttons */}
         <View style={styles.buttonGroup}>
           <SocialButton
-            icon='apple'
+            icon='logo-apple'
             text='Sign Up with Apple'
             onPress={() => Alert.alert('Apple Sign Up not implemented')}
           />
           <SocialButton
-            icon='facebook'
+            icon='logo-facebook'
             text='Sign Up with Facebook'
             color='#1877F2'
             onPress={() => Alert.alert('Facebook Sign Up not implemented')}
           />
           <SocialButton
-            icon='google'
+            icon='logo-google'
             text='Sign Up with Google'
             color='#EA4335'
             onPress={() => Alert.alert('Google Sign Up not implemented')}
@@ -80,10 +80,10 @@ const SignUpScreen = () => {
             disabled={!promptAsync}
           />
           <SocialButton
-            icon='envelope'
+            icon='mail'
             text='Sign Up with Email'
             color='#333'
-            onPress={() => router.push('registration/Registration')}
+            onPress={() => router.push('/registration/Registration')}
           />
         </View>
 
@@ -119,7 +119,7 @@ const SocialButton = ({
     onPress={onPress}
     disabled={disabled}
   >
-    <Icon name={icon} size={20} color={color} style={styles.socialIcon} />
+    <Ionicons name={icon} size={20} color={color} style={styles.socialIcon} />
     <Text style={styles.socialText}>{text}</Text>
   </TouchableOpacity>
 )
