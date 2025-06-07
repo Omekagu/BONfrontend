@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground
+} from 'react-native'
 import { useRouter } from 'expo-router'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import axios from 'axios'
@@ -91,10 +97,9 @@ const ForgotPassword = () => {
           text2: 'Password updated!'
         })
 
-        // Redirect to login after success
         setTimeout(() => {
           router.replace('/registration/Login')
-        }, 2000) // Optional delay for better UX
+        }, 2000)
       })
       .catch(() => {
         Toast.show({
@@ -106,65 +111,75 @@ const ForgotPassword = () => {
   }
 
   return (
-    <KeyboardAwareScrollView contentContainerStyle={styles.container}>
-      <View style={styles.formContainer}>
-        {step === 1 && (
-          <>
-            <LabelInputComp
-              label='Email'
-              placeholder='Enter your email'
-              value={email}
-              onChangeText={setEmail}
-            />
-            <CustomBotton onPress={handleSendOTP} button='Send OTP' />
-          </>
-        )}
+    <ImageBackground
+      source={require('../../assets/images/home-header-bg-placeholder.jpg')} // <-- Use your actual image path
+      style={styles.background}
+      resizeMode='cover'
+    >
+      <KeyboardAwareScrollView contentContainerStyle={styles.container}>
+        <View style={styles.formContainer}>
+          {step === 1 && (
+            <>
+              <LabelInputComp
+                label='Email'
+                placeholder='Enter your email'
+                value={email}
+                onChangeText={setEmail}
+              />
+              <CustomBotton onPress={handleSendOTP} button='Send OTP' />
+            </>
+          )}
 
-        {step === 2 && (
-          <>
-            <LabelInputComp
-              label='OTP'
-              placeholder='Enter OTP'
-              value={otp}
-              onChangeText={setOtp}
-            />
-            <CustomBotton onPress={handleVerifyOTP} button='Verify OTP' />
-          </>
-        )}
+          {step === 2 && (
+            <>
+              <LabelInputComp
+                label='OTP'
+                placeholder='Enter OTP'
+                value={otp}
+                onChangeText={setOtp}
+              />
+              <CustomBotton onPress={handleVerifyOTP} button='Verify OTP' />
+            </>
+          )}
 
-        {step === 3 && (
-          <>
-            <LabelInputComp
-              label='New Password'
-              placeholder='Enter new password'
-              value={newPassword}
-              onChangeText={setNewPassword}
-            />
-            <CustomBotton
-              onPress={handleResetPassword}
-              button='Reset Password'
-            />
-          </>
-        )}
+          {step === 3 && (
+            <>
+              <LabelInputComp
+                label='New Password'
+                placeholder='Enter new password'
+                value={newPassword}
+                onChangeText={setNewPassword}
+              />
+              <CustomBotton
+                onPress={handleResetPassword}
+                button='Reset Password'
+              />
+            </>
+          )}
 
-        <TouchableOpacity onPress={() => router.push('/registration/Login')}>
-          <Text style={styles.back}>Back to Login</Text>
-        </TouchableOpacity>
-      </View>
-    </KeyboardAwareScrollView>
+          <TouchableOpacity onPress={() => router.push('/registration/Login')}>
+            <Text style={styles.back}>Back to Login</Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAwareScrollView>
+    </ImageBackground>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
-    backgroundColor: '#a63932',
+    width: '100%',
+    height: '100%'
+  },
+  container: {
+    flexGrow: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
     paddingVertical: 40
   },
   formContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255,255,255,0.9)',
     padding: 20,
     borderRadius: 8,
     shadowColor: '#000',
