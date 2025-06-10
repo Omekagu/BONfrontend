@@ -1,0 +1,67 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.0
+2 info using node@v22.11.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\Public\GitHub\BON\BONfrontend\.npmrc
+5 silly config load:file:C:\Users\Bon Hotels\.npmrc
+6 silly config load:file:C:\Users\Bon Hotels\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm ci
+8 verbose argv "ci" "--cache" ".npm"
+9 verbose logfile logs-max:10 dir:C:\Users\Public\GitHub\BON\BONfrontend\.npm\_logs\2025-06-10T09_49_24_503Z-
+10 verbose logfile C:\Users\Public\GitHub\BON\BONfrontend\.npm\_logs\2025-06-10T09_49_24_503Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly idealTree buildDeps
+14 silly fetch manifest react@^18.2.0
+15 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/react 1298ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+18 verbose stack Error: could not resolve
+18 verbose stack     at PlaceDep.failPeerConflict (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:503:25)
+18 verbose stack     at new PlaceDep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:157:21)
+18 verbose stack     at #buildDepStep (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:920:18)
+18 verbose stack     at async Arborist.buildIdealTree (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+18 verbose stack     at async CI.exec (C:\Program Files\nodejs\node_modules\npm\lib\commands\ci.js:63:5)
+18 verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:207:9)
+18 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:74:5)
+19 error code ERESOLVE
+20 error ERESOLVE could not resolve
+21 error
+22 error While resolving: react-test-renderer@18.2.0
+22 error Found: react@19.1.0[2m[22m
+22 error [2mnode_modules/react[22m
+22 error   react@"^19.0.0" from the root project
+22 error   [95mpeer[39m react@">=16.3.0" from @callstack/react-theme-provider@3.0.9[2m[22m
+22 error   [2mnode_modules/@callstack/react-theme-provider[22m
+22 error     @callstack/react-theme-provider@"^3.0.9" from react-native-paper@5.14.5[2m[22m
+22 error     [2mnode_modules/react-native-paper[22m
+22 error       react-native-paper@"^5.13.1" from the root project
+22 error   56 more (@expo/vector-icons, @gorhom/bottom-sheet, ...)
+22 error
+22 error Could not resolve dependency:
+22 error [95mpeer[39m react@"^18.2.0" from react-test-renderer@18.2.0[2m[22m
+22 error [2mnode_modules/react-test-renderer[22m
+22 error   [34mdev[39m react-test-renderer@"18.2.0" from the root project
+22 error
+22 error Conflicting peer dependency: react@18.3.1[2m[22m
+22 error [2mnode_modules/react[22m
+22 error   [95mpeer[39m react@"^18.2.0" from react-test-renderer@18.2.0[2m[22m
+22 error   [2mnode_modules/react-test-renderer[22m
+22 error     [34mdev[39m react-test-renderer@"18.2.0" from the root project
+22 error
+22 error Fix the upstream dependency conflict, or retry
+22 error this command with --force or --legacy-peer-deps
+22 error to accept an incorrect (and potentially broken) dependency resolution.
+23 error
+23 error
+23 error For a full report see:
+23 error C:\Users\Public\GitHub\BON\BONfrontend\.npm\_logs\2025-06-10T09_49_24_503Z-eresolve-report.txt
+24 silly unfinished npm timer idealTree:buildDeps 1749548965951
+25 silly unfinished npm timer idealTree:node_modules/react-test-renderer 1749548965952
+26 verbose cwd C:\Users\Public\GitHub\BON\BONfrontend
+27 verbose os Windows_NT 10.0.26100
+28 verbose node v22.11.0
+29 verbose npm  v10.9.0
+30 verbose exit 1
+31 verbose code 1
+32 error A complete log of this run can be found in: C:\Users\Public\GitHub\BON\BONfrontend\.npm\_logs\2025-06-10T09_49_24_503Z-debug-0.log

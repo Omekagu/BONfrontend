@@ -2,7 +2,7 @@
   "expo": {
     "newArchEnabled": true,
     "name": "Bon-hotel",
-    "slug": "Bon-hotel",
+    "slug": "omekagu",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "https://i.postimg.cc/L5SGjp88/BON-Hotel-logo.png",
@@ -62,11 +62,12 @@
         "origin": false
       },
       "eas": {
-        "projectId": "115b8bc4-0a3a-48f6-be84-bdd6bce26316"
+        "projectId": "1fc4506a-ddb7-4648-ae0c-55a025da6e5b"
       }
     },
     "updates": {
       "url": "https://u.expo.dev/115b8bc4-0a3a-48f6-be84-bdd6bce26316"
-    }
+    },
+    "owner": "yzkvngprincess"
   }
 }

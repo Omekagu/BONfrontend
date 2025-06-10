@@ -83,7 +83,7 @@ const SignUpScreen = () => {
             icon='mail'
             text='Sign Up with Email'
             color='#333'
-            onPress={() => router.push('/registration/Registration')}
+            onPress={() => router.push('/registration/Register')}
           />
         </View>
 

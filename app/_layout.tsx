@@ -44,7 +44,7 @@ export default function _layout () {
           options={{ headerShown: false, animation: 'slide_from_right' }}
         />
         <Stack.Screen
-          name='registration/Registration'
+          name='registration/Register'
           options={{ headerShown: false, animation: 'slide_from_right' }}
         />
         <Stack.Screen
