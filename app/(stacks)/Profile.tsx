@@ -74,7 +74,7 @@ export default function Profile () {
     )
   }
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#a63932' }}>
       {/* <ScrollView style={{ padding: 10 }}> */}
       <View
         style={{

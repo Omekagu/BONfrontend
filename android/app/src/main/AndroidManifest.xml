@@ -30,7 +30,7 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="bonhotel"/>
-        <data android:scheme="exp+bon-hotel"/>
+        <data android:scheme="exp+omekagu"/>
       </intent-filter>
     </activity>
   </application>

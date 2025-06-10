@@ -331,7 +331,7 @@ export default function More () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eee',
+    backgroundColor: '#a63932',
     paddingTop: 18,
     paddingHorizontal: 0
   },
