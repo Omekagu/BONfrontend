@@ -102,7 +102,7 @@ const Login = () => {
           <Text style={styles.loginTitle}>WELCOME BACK TO BON</Text>
           <Button
             mode='contained'
-            onPress={() => router.push('/registration/Registration')}
+            onPress={() => router.push('/registration/Register')}
             style={{
               backgroundColor: '#a63932',
               marginLeft: 'auto',
