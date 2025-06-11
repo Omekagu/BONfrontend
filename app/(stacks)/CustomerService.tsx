@@ -15,7 +15,7 @@ export default function CustomerService () {
       style={{
         backgroundColor: '#a63932',
         flex: 1,
-        padding: 20
+        paddingHorizontal: 20
       }}
     >
       <MoreComp

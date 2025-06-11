@@ -31,7 +31,7 @@ export default function MoreComp ({ name, icon, onPress }) {
 const styles = StyleSheet.create({
   touchable: {
     marginHorizontal: 6,
-    marginVertical: 7,
+    marginVertical: 5,
     borderRadius: 16,
     overflow: 'hidden'
   },

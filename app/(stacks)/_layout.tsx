@@ -28,8 +28,13 @@ const screens = [
   {
     name: 'CustomerService',
     headerShown: true,
+    headerTitle: 'Contact Us',
     headerTintColor: '#fff',
-    headerStyle: { backgroundColor: '#a63932' }
+    headerStyle: {
+      backgroundColor: '#a63932',
+      borderBottomWidth: 3,
+      borderBottomColor: '#fff'
+    }
   },
   { name: 'Loyalty', headerShown: false },
   {

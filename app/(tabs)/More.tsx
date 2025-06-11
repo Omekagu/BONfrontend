@@ -458,7 +458,8 @@ const styles = StyleSheet.create({
   },
   versionText: {
     textAlign: 'center',
-    color: '#b3a0cf',
+    fontWeight: '900',
+    color: '#fff',
     fontSize: 13,
     marginBottom: 18
   },
