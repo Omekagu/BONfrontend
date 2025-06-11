@@ -190,7 +190,8 @@ export default function More () {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.accessButton}
-          onPress={() => router.push('/Wallet')}
+          // onPress={() => router.push('/Wallet')}
+          onPress={() => alert('Feature Coming Soon')}
         >
           <Fontisto name='wallet' size={28} color='#000' />
           <Text style={styles.cardText}>Wallet</Text>
@@ -206,7 +207,7 @@ export default function More () {
         showsVerticalScrollIndicator={false}
       >
         {/* Checkups Section */}
-        <View style={styles.cardRow}>
+        {/* <View style={styles.cardRow}>
           <View style={styles.card}>
             <AntDesign
               name='Safety'
@@ -247,7 +248,7 @@ export default function More () {
           <Text style={styles.cardTitle}>Estimated Cost Saved</Text>
           <Text style={styles.cardText}>₦1000</Text>
         </View>
-
+ */}
         {/* Settings Section */}
         <MoreComp
           onPress={() => router.push('/Profile')}
@@ -255,7 +256,7 @@ export default function More () {
           icon={<Ionicons name='person-circle-sharp' size={24} color='#000' />}
         />
         <MoreComp
-          onPress={() => router.push('/Reward')}
+          onPress={() => alert('Feature Coming Soon')}
           name={'Rewards & Wallet'}
           icon={<Fontisto name='wallet' size={24} color='#000' />}
         />
@@ -264,21 +265,21 @@ export default function More () {
           name={'Loyalty Programme'}
           icon={<FontAwesome6 name='thumbs-up' size={24} color='#000' />}
         />
-        <MoreComp
+        {/* <MoreComp
           onPress={() => router.push('/Bookings')}
           name={'Saved'}
           icon={<AntDesign name='hearto' size={24} color='#000' />}
-        />
+        /> */}
         <MoreComp
           onPress={() => router.push('/Reviews')}
           name={'Reviews'}
           icon={<FontAwesome6 name='thumbs-up' size={24} color='#000' />}
         />
-        <MoreComp
+        {/* <MoreComp
           onPress={() => router.push('/Questions')}
           name={'FAQs'}
           icon={<FontAwesome6 name='question' size={24} color='#000' />}
-        />
+        /> */}
         <MoreComp
           onPress={() => router.push('/CustomerService')}
           name={'Contact Customer Service'}
@@ -290,13 +291,14 @@ export default function More () {
             />
           }
         />
-        <MoreComp
+        {/* <MoreComp
           onPress={() => router.push('/ResourceCentre')}
           name={'Safety Resource Centre'}
           icon={<AntDesign name='Safety' size={24} color='#000' />}
-        />
+        /> */}
         <MoreComp
-          onPress={() => router.push('/Deals')}
+          onPress={() => router.push('https://bonhotels.com')}
+          // name={'Terms & Conditions'}
           name={'Deals'}
           icon={<Ionicons name='contract' size={24} color='#000' />}
         />
@@ -333,7 +335,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#a63932',
     paddingTop: 18,
-    paddingHorizontal: 0
+    paddingHorizontal: 0,
+    marginBottom: -40
   },
   loader: {
     flex: 1,
