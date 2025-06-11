@@ -25,7 +25,12 @@ const screens = [
   { name: 'SearchFlightScreen', headerShown: false },
   { name: 'Deals', headerShown: false },
   { name: 'Profile', headerShown: false },
-  { name: 'CustomerService', headerShown: false },
+  {
+    name: 'CustomerService',
+    headerShown: true,
+    headerTintColor: '#fff',
+    headerStyle: { backgroundColor: '#a63932' }
+  },
   { name: 'Loyalty', headerShown: false },
   {
     name: 'Wallet',
