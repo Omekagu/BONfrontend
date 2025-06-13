@@ -2,6 +2,7 @@ import React from 'react'
 import { Stack, Redirect, useSegments } from 'expo-router'
 import Toast from 'react-native-toast-message'
 import { useAuth } from '@/hooks/useAuth'
+import { AlertNotificationRoot } from 'react-native-alert-notification'
 
 export default function _layout () {
   const { isAuthenticated, loading } = useAuth()
@@ -21,7 +22,7 @@ export default function _layout () {
 
   // If not authenticated, show only registration/login screens
   return (
-    <>
+    <AlertNotificationRoot>
       <Stack
         screenOptions={{
           headerStyle: { backgroundColor: '#a63932' },
@@ -66,6 +67,6 @@ export default function _layout () {
         <Stack.Screen name='[missing]' options={{ title: '404' }} />
       </Stack>
       <Toast />
-    </>
+    </AlertNotificationRoot>
   )
 }

@@ -20,6 +20,12 @@ import MoreComp from '@/component/MoreComp'
 import * as ImagePicker from 'expo-image-picker'
 import axios from 'axios'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import {
+  ALERT_TYPE,
+  Dialog,
+  AlertNotificationRoot,
+  Toast
+} from 'react-native-alert-notification'
 
 export default function More () {
   const router = useRouter()
@@ -184,19 +190,32 @@ export default function More () {
 
       {/* Quick Access Buttons */}
       <View style={styles.quickAccess}>
-        <TouchableOpacity style={styles.accessButton}>
+        <TouchableOpacity
+          style={styles.accessButton}
+          onPress={() => router.push('/CustomerService')}
+        >
           <Ionicons name='help-circle' size={28} color='#000' />
           <Text style={styles.cardText}>Help</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.accessButton}
           // onPress={() => router.push('/Wallet')}
-          onPress={() => alert('Feature Coming Soon')}
+          onPress={() =>
+            Dialog.show({
+              type: ALERT_TYPE.WARNING,
+              title: 'Wallet',
+              textBody: 'Wallet feature coming soon',
+              button: 'close'
+            })
+          }
         >
           <Fontisto name='wallet' size={28} color='#000' />
           <Text style={styles.cardText}>Wallet</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.accessButton}>
+        <TouchableOpacity
+          style={styles.accessButton}
+          onPress={() => router.push('/Bookings')}
+        >
           <Ionicons name='time-outline' size={28} color='#000' />
           <Text style={styles.cardText}>Activity</Text>
         </TouchableOpacity>
@@ -256,7 +275,14 @@ export default function More () {
           icon={<Ionicons name='person-circle-sharp' size={24} color='#000' />}
         />
         <MoreComp
-          onPress={() => alert('Feature Coming Soon')}
+          onPress={() =>
+            Dialog.show({
+              type: ALERT_TYPE.WARNING,
+              title: 'Wallet',
+              textBody: 'Wallet feature coming soon',
+              button: 'close'
+            })
+          }
           name={'Rewards & Wallet'}
           icon={<Fontisto name='wallet' size={24} color='#000' />}
         />
@@ -265,21 +291,11 @@ export default function More () {
           name={'Loyalty Programme'}
           icon={<FontAwesome6 name='thumbs-up' size={24} color='#000' />}
         />
-        {/* <MoreComp
-          onPress={() => router.push('/Bookings')}
-          name={'Saved'}
-          icon={<AntDesign name='hearto' size={24} color='#000' />}
-        /> */}
         <MoreComp
-          onPress={() => router.push('/Reviews')}
+          onPress={() => router.push('https://bonhotels.com')}
           name={'Reviews'}
           icon={<FontAwesome6 name='thumbs-up' size={24} color='#000' />}
         />
-        {/* <MoreComp
-          onPress={() => router.push('/Questions')}
-          name={'FAQs'}
-          icon={<FontAwesome6 name='question' size={24} color='#000' />}
-        /> */}
         <MoreComp
           onPress={() => router.push('/CustomerService')}
           name={'Contact Customer Service'}
@@ -291,22 +307,17 @@ export default function More () {
             />
           }
         />
-        {/* <MoreComp
-          onPress={() => router.push('/ResourceCentre')}
-          name={'Safety Resource Centre'}
-          icon={<AntDesign name='Safety' size={24} color='#000' />}
-        /> */}
+
         <MoreComp
-          onPress={() => router.push('https://bonhotels.com')}
-          // name={'Terms & Conditions'}
+          onPress={() => router.push('tel:08120190530')}
           name={'Deals'}
           icon={<Ionicons name='contract' size={24} color='#000' />}
         />
-        <MoreComp
+        {/* <MoreComp
           onPress={() => router.push('/Settings')}
           name={'Settings'}
           icon={<Ionicons name='settings-outline' size={24} color='#000' />}
-        />
+        /> */}
 
         {/* Logout */}
         <View style={styles.bottom}>
